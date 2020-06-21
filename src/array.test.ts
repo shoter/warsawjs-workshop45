@@ -52,6 +52,14 @@ describe("removeItemFromArray", () => {
     expect(newArray[1]).toBe(7);
     expect(newArray.length).toBe(2);
   });
+
+  test("Removing element from empty array should return empty array", () => {
+    let array : number[] = [];
+    let newArray = removeItemFromArray(array, 7);
+
+    expect(array.length).toBe(0);
+    expect(newArray.length).toBe(0);
+  })
 });
 
 describe("Contains", () => {
@@ -68,13 +76,18 @@ describe("Contains", () => {
     }
   });
 
-  test("Contains should return true when element is inside array", () => {
+  test("should return true when element is inside array", () => {
     let array = [1, 5, 7];
     expect(contains(array, 5)).toBe(true);
   });
 
-  test("Contains should return false when element is not in array", () => {
+  test("should return false when element is not in array", () => {
     let array = [1, 5, 7];
     expect(contains(array, 123)).toBe(false);
+  });
+
+  test("should return false if array is empty", () => {
+    let array : number[] = [];
+    expect(contains(array, 1234)).toBe(false);
   });
 });
