@@ -1,5 +1,5 @@
-export function myBind(thisArg : any, method: Function) {
-    return () => {
-        method.call(thisArg);
+export function bind(thisArg : any, method: Function) {
+    return (...args : any[]) => {
+        method.call(thisArg, args);
     };
 }

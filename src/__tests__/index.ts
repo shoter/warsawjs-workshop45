@@ -1,5 +1,4 @@
-import { myBind } from "../index";
-import { arch } from "os";
+import { bind } from "../index";
 
 interface SomeType {
     myNumber : number
@@ -7,14 +6,15 @@ interface SomeType {
 
 
 
-function someMethod(this: SomeType, otherNumber : number) : number {
-    return this.myNumber;
-}
 
 test("testBind", () => {
     let myVariable : SomeType = { myNumber: 10 };
-    let bindedMethod = myBind(myVariable, someMethod) as any;
+    function someMethod(this: SomeType, otherNumber : number) : number {
+        console.log("To ja someMethod");
+        return this.myNumber;
+    }
+    let bindedMethod = bind(myVariable, someMethod) as any;
     // expect(someMethod.bind(myVariable)(5)).toBe(15);
-    expect(bindedMethod(5)).toBe(15);
+    expect(someMethod(5)).toBe(15);
 })
 
