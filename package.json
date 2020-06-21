@@ -1,0 +1,31 @@
+{
+  "name": "warsawjs-workshop45-askql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shoter/warsawjs-workshop45-askql.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "GNU3.0",
+  "bugs": {
+    "url": "https://github.com/shoter/warsawjs-workshop45-askql/issues"
+  },
+  "homepage": "https://github.com/shoter/warsawjs-workshop45-askql#readme",
+  "devDependencies": {
+    "@types/jest": "^26.0.0",
+    "@types/node": "^14.0.13",
+    "jest": "^26.0.1",
+    "ts-jest": "^26.1.0"
+  },
+  "dependencies": {
+    "trim-left": "^1.0.1",
+    "typescript": "^3.9.5"
+  }
+}
