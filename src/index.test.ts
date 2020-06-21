@@ -1,4 +1,4 @@
-import { bind } from "../index";
+import { bind } from "./index";
 
 interface SomeType {
     myNumber : number
@@ -15,6 +15,6 @@ test("testBind", () => {
     }
     let bindedMethod = bind(myVariable, someMethod) as any;
     // expect(someMethod.bind(myVariable)(5)).toBe(15);
-    expect(someMethod(5)).toBe(15);
+    expect(bindedMethod(1)).toBe(15);
 })
 
